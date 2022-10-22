@@ -23,5 +23,9 @@ texture = ExtResource( 1 )
 scale = Vector2( 10, 10 )
 shape = SubResource( 2 )
 
+[node name="Position" type="Node2D" parent="."]
+position = Vector2( 48, 0 )
+rotation = 1.5708
+
 [connection signal="area_entered" from="Area2D" to="." method="_on_Area2D_area_entered"]
 [connection signal="area_exited" from="Area2D" to="." method="_on_Area2D_area_exited"]
