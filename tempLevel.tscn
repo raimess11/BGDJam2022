@@ -1,0 +1,22 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://room.tscn" type="PackedScene" id=1]
+
+[sub_resource type="GDScript" id=1]
+script/source = "extends Node2D
+
+var current_room
+
+var tabRoom = []
+
+func _ready():
+	tabRoom[0] = preload(\"res://room.tscn\")
+	tabRoom[1] = preload(\"res://room.tscn\")
+	current_room = tabRoom[0]
+
+"
+
+[node name="tempLevel" type="Node2D"]
+script = SubResource( 1 )
+
+[node name="room" parent="." instance=ExtResource( 1 )]
