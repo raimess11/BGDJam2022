@@ -10,3 +10,9 @@ position = Vector2( 332, 146 )
 
 [node name="Item" parent="." instance=ExtResource( 2 )]
 position = Vector2( 182, 151 )
+
+[node name="Item2" parent="." instance=ExtResource( 2 )]
+position = Vector2( 215, 86 )
+
+[node name="Item3" parent="." instance=ExtResource( 2 )]
+position = Vector2( 212, 219 )
