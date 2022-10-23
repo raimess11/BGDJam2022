@@ -25,7 +25,7 @@ func _on_Start_pressed():
 	fade.call_deferred("start")
 	yield(fade, "finished")
 	yield(get_tree().create_timer(1.0),"timeout")
-	get_tree().change_scene("res://World.tscn")
+	get_tree().change_scene("res://Level/Level1/Level1.tscn")
 
 
 func _on_Credit_pressed():
