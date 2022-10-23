@@ -4,7 +4,7 @@ onready var vbox = $PauseMenu/VBoxContainer
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	vbox.add_constant_override("separation", 30)
+	pass
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
