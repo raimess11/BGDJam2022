@@ -1,0 +1,33 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://tempTileMap.tres" type="TileSet" id=1]
+[ext_resource path="res://AccessPoint1.tscn" type="PackedScene" id=2]
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 0, 10.6667 )
+
+[node name="Room1" type="Node2D"]
+z_index = -1
+
+[node name="TileMap" type="TileMap" parent="."]
+tile_set = ExtResource( 1 )
+format = 1
+tile_data = PoolIntArray( -65526, 1, 0, -65525, 2, 0, -65524, 2, 0, -65523, 1, 0, 3, 1, 0, 4, 1, 0, 5, 1, 0, 6, 1, 0, 7, 1, 0, 8, 1, 0, 9, 1, 0, 10, 1, 0, 11, 2, 0, 12, 2, 0, 13, 1, 0, 14, 1, 0, 65539, 1, 0, 65550, 1, 0, 131075, 1, 0, 131086, 1, 0, 131087, 1, 0, 131088, 1, 0, 196610, 1, 0, 196611, 1, 0, 196624, 1, 0, 262146, 2, 0, 262147, 2, 0, 262160, 1, 0, 327682, 2, 0, 327683, 2, 0, 327696, 1, 0, 393218, 1, 0, 393219, 1, 0, 393230, 1, 0, 393231, 1, 0, 393232, 1, 0, 458755, 1, 0, 458766, 1, 0, 524291, 1, 0, 524292, 1, 0, 524293, 1, 0, 524294, 1, 0, 524295, 1, 0, 524296, 2, 0, 524297, 2, 0, 524298, 1, 0, 524299, 1, 0, 524300, 1, 0, 524301, 1, 0, 524302, 1, 0, 589831, 1, 0, 589832, 2, 0, 589833, 2, 0, 589834, 1, 0 )
+
+[node name="AccessPoint1" parent="TileMap" instance=ExtResource( 2 )]
+position = Vector2( 768, -64 )
+
+[node name="AccessPoint2" parent="TileMap" instance=ExtResource( 2 )]
+position = Vector2( 576, 640 )
+
+[node name="AccessPoint3" parent="TileMap" instance=ExtResource( 2 )]
+position = Vector2( 128, 320 )
+
+[node name="CollisionShape2D" parent="TileMap/AccessPoint3/Area2D" index="0"]
+shape = SubResource( 1 )
+
+[node name="controlRoom" type="Node2D" parent="."]
+
+[editable path="TileMap/AccessPoint1"]
+[editable path="TileMap/AccessPoint2"]
+[editable path="TileMap/AccessPoint3"]
