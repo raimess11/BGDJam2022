@@ -1,19 +1,16 @@
-[gd_scene load_steps=13 format=2]
+[gd_scene load_steps=10 format=2]
 
-[ext_resource path="res://ui/main menu/rsz_credit.png" type="Texture" id=1]
-[ext_resource path="res://ui/main menu/rsz_exit.png" type="Texture" id=2]
-[ext_resource path="res://ui/main menu/rsz_start.png" type="Texture" id=3]
+[ext_resource path="res://ui/pause menu/rsz_1play_square_button.png" type="Texture" id=1]
+[ext_resource path="res://ui/pause menu/rsz_picsart_22-10-23_08-13-41-918.png" type="Texture" id=2]
+[ext_resource path="res://ui/pause menu/rsz_1home_square_button.png" type="Texture" id=3]
 [ext_resource path="res://ui/menu.gd" type="Script" id=4]
 [ext_resource path="res://ui/LoveYaLikeASister.ttf" type="DynamicFontData" id=5]
-[ext_resource path="res://ui/main menu/rsz_picsart_22-10-23_07-28-36-066.png" type="Texture" id=6]
-[ext_resource path="res://ui/main menu/rsz_1picsart_22-10-23_07-30-33-448.png" type="Texture" id=7]
-[ext_resource path="res://ui/main menu/rsz_picsart_22-10-23_07-30-12-768.png" type="Texture" id=8]
-[ext_resource path="res://ui/main menu/rsz_picsart_22-10-23_07-31-13-516.png" type="Texture" id=9]
-[ext_resource path="res://ui/main menu/rsz_picsart_22-10-23_07-29-44-398.png" type="Texture" id=10]
-[ext_resource path="res://ui/main menu/rsz_1picsart_22-10-23_07-29-44-398.png" type="Texture" id=11]
+[ext_resource path="res://ui/pause menu/rsz_picsart_22-10-23_08-16-13-166.png" type="Texture" id=6]
+[ext_resource path="res://ui/pause menu/rsz_picsart_22-10-23_08-16-01-008.png" type="Texture" id=7]
+[ext_resource path="res://ui/pause menu/rsz_picsart_22-10-23_08-14-00-339.png" type="Texture" id=8]
 
 [sub_resource type="DynamicFont" id=1]
-size = 144
+size = 54
 font_data = ExtResource( 5 )
 
 [node name="menu" type="Control"]
@@ -34,53 +31,42 @@ anchor_top = 1.0
 anchor_right = 0.5
 anchor_bottom = 1.0
 margin_left = -512.0
-margin_top = -147.0
+margin_top = -124.0
 margin_right = 512.0
-margin_bottom = -64.0
+margin_bottom = -24.0
 alignment = 1
 
 [node name="Start" type="TextureButton" parent="CanvasLayer/VBoxContainer"]
-margin_left = 137.0
-margin_right = 384.0
-margin_bottom = 83.0
-texture_normal = ExtResource( 3 )
-texture_pressed = ExtResource( 6 )
-texture_hover = ExtResource( 11 )
-
-[node name="Credit" type="TextureButton" parent="CanvasLayer/VBoxContainer"]
-margin_left = 388.0
-margin_right = 635.0
-margin_bottom = 83.0
+margin_left = 410.0
+margin_right = 510.0
+margin_bottom = 100.0
 texture_normal = ExtResource( 1 )
-texture_pressed = ExtResource( 7 )
-texture_hover = ExtResource( 8 )
+texture_pressed = ExtResource( 6 )
+texture_hover = ExtResource( 7 )
 
 [node name="Exit" type="TextureButton" parent="CanvasLayer/VBoxContainer"]
-margin_left = 639.0
-margin_right = 886.0
-margin_bottom = 83.0
-texture_normal = ExtResource( 2 )
-texture_pressed = ExtResource( 9 )
-texture_hover = ExtResource( 10 )
+margin_left = 514.0
+margin_right = 614.0
+margin_bottom = 100.0
+texture_normal = ExtResource( 3 )
+texture_pressed = ExtResource( 8 )
+texture_hover = ExtResource( 2 )
 
 [node name="Title" type="Label" parent="CanvasLayer"]
-anchor_left = 0.5
 anchor_top = 0.5
-anchor_right = 0.5
+anchor_right = 1.0
 anchor_bottom = 0.5
-margin_left = -259.0
-margin_top = -196.0
-margin_right = 259.0
-margin_bottom = 54.0
+margin_top = -90.0
+margin_bottom = 4.0
 custom_fonts/font = SubResource( 1 )
-text = "JUDUL"
+text = "SIMPLE ROOM"
 align = 1
 
 [node name="Fade" type="ColorRect" parent="CanvasLayer"]
+visible = false
 anchor_right = 1.0
 anchor_bottom = 1.0
 color = Color( 0, 0, 0, 1 )
 
 [connection signal="pressed" from="CanvasLayer/VBoxContainer/Start" to="." method="_on_Start_pressed"]
-[connection signal="pressed" from="CanvasLayer/VBoxContainer/Credit" to="." method="_on_Credit_pressed"]
 [connection signal="pressed" from="CanvasLayer/VBoxContainer/Exit" to="." method="_on_Exit_pressed"]
