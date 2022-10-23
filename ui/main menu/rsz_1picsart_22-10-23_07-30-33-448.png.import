@@ -1,0 +1,35 @@
+[remap]
+
+importer="texture"
+type="StreamTexture"
+path="res://.import/rsz_1picsart_22-10-23_07-30-33-448.png-de09e64388b0d7bbf6fe981a845fb93c.stex"
+metadata={
+"vram_texture": false
+}
+
+[deps]
+
+source_file="res://ui/main menu/rsz_1picsart_22-10-23_07-30-33-448.png"
+dest_files=[ "res://.import/rsz_1picsart_22-10-23_07-30-33-448.png-de09e64388b0d7bbf6fe981a845fb93c.stex" ]
+
+[params]
+
+compress/mode=0
+compress/lossy_quality=0.7
+compress/hdr_mode=0
+compress/bptc_ldr=0
+compress/normal_map=0
+flags/repeat=0
+flags/filter=true
+flags/mipmaps=false
+flags/anisotropic=false
+flags/srgb=2
+process/fix_alpha_border=true
+process/premult_alpha=false
+process/HDR_as_SRGB=false
+process/invert_color=false
+process/normal_map_invert_y=false
+stream=false
+size_limit=0
+detect_3d=true
+svg/scale=1.0
