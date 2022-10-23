@@ -42,7 +42,9 @@ func _physics_process(delta):
 	animationTree.set("parameters/BlendSpace2D/blend_position", direction)
 	animationState.travel("BlendSpace2D")
 	velocity = direction.normalized() * SPEED * delta
-	
+	if direction != Vector2.ZERO:
+		if !$AudioStreamPlayer.playing:
+			$AudioStreamPlayer.play()
 	velocity = move_and_slide(velocity,Vector2.UP)
 	#jika player tidak bergerak
 	if velocity != Vector2.ZERO:
