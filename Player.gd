@@ -36,7 +36,9 @@ func _physics_process(delta):
 	direction.y = Input.get_action_strength("ui_down") - Input.get_action_strength("ui_up")
 	
 	velocity = direction.normalized() * SPEED * delta
-	
+	if direction != Vector2.ZERO:
+		if !$AudioStreamPlayer.playing:
+			$AudioStreamPlayer.play()
 	velocity = move_and_slide(velocity,Vector2.UP)
 	#jika player tidak bergerak
 	if velocity != Vector2.ZERO:
