@@ -213,5 +213,5 @@ color = Color( 0, 0, 0, 1 )
 [connection signal="body_entered" from="TileMap4/Prev" to="." method="_on_Prev_body_enteredR4"]
 [connection signal="body_entered" from="TileMap5/Start" to="." method="_on_Start_body_enteredR4"]
 [connection signal="body_entered" from="TileMap5/Start2" to="." method="_on_Start_body_enteredR4"]
-[connection signal="body_entered" from="TileMap5/YouWin" to="." method="_on_Start_body_enteredR4"]
+[connection signal="body_entered" from="TileMap5/YouWin" to="." method="_on_YouWin_body_entered"]
 [connection signal="body_entered" from="TileMap5/Start4" to="." method="_on_Start_body_enteredR4"]

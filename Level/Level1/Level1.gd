@@ -156,3 +156,8 @@ func _on_Area2D_body_enteredStart(body):
 		player.global_position = room1
 #		camera.global_position = player.global_position
 		ganti_room(tabRoom[1])
+
+
+func _on_YouWin_body_entered(body):
+	if body.is_in_group("Player"):
+		get_tree().change_scene("res://Level/Level1/win.tscn")
