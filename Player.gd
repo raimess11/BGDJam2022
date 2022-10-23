@@ -11,12 +11,17 @@ var detecdedItem = []
 var positionDrop: Vector2 = Vector2.ZERO
 
 
+onready var animationTree = $AnimationTree
+onready var animationState = animationTree.get("parameters/playback")
+
 onready var PnD = preload("res://PickAndDrop.gd")
 onready var pos = $Position
 
 func _ready():
+	animationTree.active = true
 	positionDrop = pos.global_position
 #	tabItem = get_tree().get_nodes_in_group("Item")
+	
 
 func set_item(value):
 	if inventory != null:
@@ -34,7 +39,8 @@ func set_item(value):
 func _physics_process(delta):
 	direction.x = Input.get_action_strength("ui_right") - Input.get_action_strength("ui_left") 
 	direction.y = Input.get_action_strength("ui_down") - Input.get_action_strength("ui_up")
-	
+	animationTree.set("parameters/BlendSpace2D/blend_position", direction)
+	animationState.travel("BlendSpace2D")
 	velocity = direction.normalized() * SPEED * delta
 	
 	velocity = move_and_slide(velocity,Vector2.UP)
